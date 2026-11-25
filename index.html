@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Categorias · Sabor de Casa</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+  <header class="cabecalho" id="cabecalho"></header>
+
+  <main class="conteudo">
+    <section class="titulo-pagina">
+      <div>
+        <h1>Categorias do cardápio</h1>
+        <p class="subtitulo">Organize os pratos da Sabor de Casa por categoria.</p>
+      </div>
+      <a class="botao botao-primario" href="categoria-form.html">+ Nova categoria</a>
+    </section>
+
+    <div class="cartao">
+      <div class="tabela-rolavel">
+        <table class="tabela">
+          <thead>
+            <tr>
+              <th>Nome</th>
+              <th>Descrição</th>
+              <th class="numero">Pratos</th>
+              <th class="acoes">Ações</th>
+            </tr>
+          </thead>
+          <tbody id="lista-categorias"></tbody>
+        </table>
+      </div>
+      <p class="estado-vazio" id="estado-vazio" hidden>Nenhuma categoria cadastrada ainda.</p>
+    </div>
+  </main>
+
+  <div class="toasts" id="toasts" aria-live="polite"></div>
+
+  <script src="js/ui.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/categorias.js"></script>
+</body>
+</html>

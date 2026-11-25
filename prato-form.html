@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Prato · Sabor de Casa</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+  <header class="cabecalho" id="cabecalho"></header>
+
+  <main class="conteudo">
+    <p class="migalhas">
+      <a href="index.html">Categorias</a> /
+      <a id="migalha-categoria" href="index.html">…</a> /
+      <span id="migalha-atual">Novo prato</span>
+    </p>
+    <section class="titulo-pagina">
+      <h1 id="titulo">Novo prato</h1>
+    </section>
+
+    <form class="cartao cartao-formulario" id="formulario" novalidate>
+      <div class="campo">
+        <label for="nome">Nome *</label>
+        <input type="text" id="nome" name="nome" maxlength="80" autocomplete="off" required>
+        <p class="erro-campo" data-erro-de="nome"></p>
+      </div>
+
+      <div class="campo">
+        <label for="descricao">Descrição</label>
+        <textarea id="descricao" name="descricao" rows="3" maxlength="200"></textarea>
+        <p class="erro-campo" data-erro-de="descricao"></p>
+      </div>
+
+      <div class="campo">
+        <label for="preco">Preço (R$) *</label>
+        <input type="text" id="preco" name="preco" inputmode="decimal" placeholder="0,00" autocomplete="off" required>
+        <p class="dica">Use vírgula ou ponto. Deve ser maior que zero.</p>
+        <p class="erro-campo" data-erro-de="preco"></p>
+      </div>
+
+      <div class="campo campo-caixa">
+        <label for="disponivel">
+          <input type="checkbox" id="disponivel" name="disponivel" checked>
+          Disponível para pedido
+        </label>
+      </div>
+
+      <div class="barra-botoes">
+        <button class="botao botao-primario" type="submit" id="botao-salvar">Salvar</button>
+        <a class="botao" id="botao-cancelar" href="index.html">Cancelar</a>
+      </div>
+    </form>
+  </main>
+
+  <div class="toasts" id="toasts" aria-live="polite"></div>
+
+  <script src="js/ui.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/validacao.js"></script>
+  <script src="js/prato-form.js"></script>
+</body>
+</html>

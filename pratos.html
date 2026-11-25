@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pratos · Sabor de Casa</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+  <header class="cabecalho" id="cabecalho"></header>
+
+  <main class="conteudo">
+    <p class="migalhas"><a href="index.html">Categorias</a> / <span id="migalha-atual">Pratos</span></p>
+    <section class="titulo-pagina">
+      <div>
+        <h1 id="titulo">Pratos</h1>
+        <p class="subtitulo" id="subtitulo"></p>
+      </div>
+      <a class="botao botao-primario" id="botao-novo" href="#">+ Novo prato</a>
+    </section>
+
+    <div class="cartao">
+      <div class="tabela-rolavel">
+        <table class="tabela">
+          <thead>
+            <tr>
+              <th>Prato</th>
+              <th>Descrição</th>
+              <th class="numero">Preço</th>
+              <th>Situação</th>
+              <th class="acoes">Ações</th>
+            </tr>
+          </thead>
+          <tbody id="lista-pratos"></tbody>
+        </table>
+      </div>
+      <p class="estado-vazio" id="estado-vazio" hidden>Esta categoria ainda não tem pratos.</p>
+    </div>
+  </main>
+
+  <div class="toasts" id="toasts" aria-live="polite"></div>
+
+  <script src="js/ui.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/pratos.js"></script>
+</body>
+</html>

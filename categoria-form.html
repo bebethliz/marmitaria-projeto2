@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Categoria · Sabor de Casa</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+  <header class="cabecalho" id="cabecalho"></header>
+
+  <main class="conteudo">
+    <p class="migalhas"><a href="index.html">Categorias</a> / <span id="migalha-atual">Nova categoria</span></p>
+    <section class="titulo-pagina">
+      <h1 id="titulo">Nova categoria</h1>
+    </section>
+
+    <form class="cartao cartao-formulario" id="formulario" novalidate>
+      <div class="campo">
+        <label for="nome">Nome *</label>
+        <input type="text" id="nome" name="nome" maxlength="80" autocomplete="off" required>
+        <p class="erro-campo" data-erro-de="nome"></p>
+      </div>
+
+      <div class="campo">
+        <label for="descricao">Descrição</label>
+        <textarea id="descricao" name="descricao" rows="3" maxlength="200"></textarea>
+        <p class="erro-campo" data-erro-de="descricao"></p>
+      </div>
+
+      <div class="barra-botoes">
+        <button class="botao botao-primario" type="submit" id="botao-salvar">Salvar</button>
+        <a class="botao" href="index.html">Cancelar</a>
+      </div>
+    </form>
+  </main>
+
+  <div class="toasts" id="toasts" aria-live="polite"></div>
+
+  <script src="js/ui.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/validacao.js"></script>
+  <script src="js/categoria-form.js"></script>
+</body>
+</html>
